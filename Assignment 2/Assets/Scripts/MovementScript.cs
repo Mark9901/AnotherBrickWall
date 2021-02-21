@@ -24,7 +24,7 @@ public class MovementScript : MonoBehaviour
             float x = Input.GetAxis("Horizontal");
             float z = Input.GetAxis("Vertical");
 
-            rb.velocity = transform.right * x + transform.forward * z;
+            rb.velocity = (transform.right * x + transform.forward * z) * movementspeed;
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && grounded == true)
