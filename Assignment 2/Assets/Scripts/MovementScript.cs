@@ -4,71 +4,47 @@ using UnityEngine;
 
 public class MovementScript : MonoBehaviour
 {
-    private Rigidbody rb;
-    public float movementspeed;
-    public float jumpforce;
-    public bool grounded = false;
-    public bool isjumping = false;
+    private CharacterController controller;
+    private Vector3 playerVelocity;
+    private bool groundedPlayer;
+    public float playerSpeed = 2.0f;
+    public float jumpHeight = 1.0f;
+    private float gravityValue = -9.82f;
 
-  
-
-    void Start()
+    private void Start()
     {
-        rb = gameObject.GetComponent<Rigidbody>();
+        controller = gameObject.GetComponent<CharacterController>();
     }
 
     void Update()
     {
-        if (grounded == true)
+        groundedPlayer = controller.isGrounded;
+        if (groundedPlayer && playerVelocity.y < 0)
         {
-            float x = Input.GetAxis("Horizontal");
-            float z = Input.GetAxis("Vertical");
-
-            rb.velocity = (transform.right * x + transform.forward * z) * movementspeed;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space) && grounded == true)
-        {
-            isjumping = true;
-            StartCoroutine(JumpingStartAndStop());
-        }
-
-        if (isjumping == true)
-        {
-            rb.AddForce(Vector3.up * jumpforce, ForceMode.Acceleration);
+            playerVelocity.y = 0f;
         }
 
 
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
+
+        Vector3 move = (transform.right * x + transform.forward * z);
 
 
-    }
-
-    private IEnumerator JumpingStartAndStop()
-    {
-        yield return new WaitForSeconds(0.1f);
-        isjumping = false;
-    }
+       
+        controller.Move(move * Time.deltaTime * playerSpeed);
 
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Ground")
+
+
+
+        // Changes the height position of the player..
+        if (Input.GetButton("Jump") && groundedPlayer)
         {
-            grounded = true;
+            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
         }
-    }
-    private void OnCollisionStay(Collision collision)
-    {
-        if (collision.gameObject.tag == "Ground")
-        {
-            grounded = true;
-        }
-    }
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.tag == "Ground")
-        {
-            grounded = false;
-        }
+
+        playerVelocity.y += gravityValue * Time.deltaTime;
+        controller.Move(playerVelocity * Time.deltaTime);
     }
 }
