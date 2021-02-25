@@ -2,6 +2,12 @@
     "m_Name": "Settings",
     "m_Path": "ProjectSettings/Packages/com.unity.polybrush/Settings.json",
     "m_Dictionary": {
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+        "m_DictionaryValues": []
+=======
+>>>>>>> Stashed changes
         "m_DictionaryValues": [
             {
                 "type": "System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
@@ -124,5 +130,9 @@
                 "value": "{\"m_Value\":{\"infos\":[]}}"
             }
         ]
+<<<<<<< Updated upstream
+=======
+>>>>>>> main
+>>>>>>> Stashed changes
     }
 }
