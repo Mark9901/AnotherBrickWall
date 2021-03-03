@@ -23,6 +23,16 @@ public class PauseMenus : MonoBehaviour
                 Pause();
             }
         }
+        if (Input.GetKeyDown(KeyCode.Backspace))
+        {
+            SceneManager.LoadScene("MainScene");
+            Debug.Log("Reload");
+        }
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            SceneManager.LoadScene("Main Menu Scene");
+            Debug.Log("MainMenu");
+        }
     }
 
     public void Resume()
