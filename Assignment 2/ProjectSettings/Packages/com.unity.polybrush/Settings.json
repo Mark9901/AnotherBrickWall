@@ -2,6 +2,7 @@
     "m_Name": "Settings",
     "m_Path": "ProjectSettings/Packages/com.unity.polybrush/Settings.json",
     "m_Dictionary": {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
@@ -134,5 +135,8 @@
 =======
 >>>>>>> main
 >>>>>>> Stashed changes
+=======
+        "m_DictionaryValues": []
+>>>>>>> main
     }
 }
