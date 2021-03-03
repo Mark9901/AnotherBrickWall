@@ -38,7 +38,7 @@ public class MovementScript : MonoBehaviour
 
 
 
-        // Changes the height position of the player..
+       
         if (Input.GetButton("Jump") && groundedPlayer)
         {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
