@@ -5,15 +5,16 @@ using UnityEngine;
 public class CollisionScript : MonoBehaviour
 {
     Vector3 respawnPosition = Vector3.zero;
-    public Transform firstCheckpoint;
-    
+    //public Transform firstCheckpoint;
+    private CharacterController controller;
     public GameObject boulder;
     private bool hasrolled = false;
 
     
     void Start()
     {
-        respawnPosition = firstCheckpoint.position;
+        respawnPosition = gameObject.transform.position;
+        controller = gameObject.GetComponent<CharacterController>();
     }
 
    
@@ -28,7 +29,9 @@ public class CollisionScript : MonoBehaviour
 
         if (hit.gameObject.CompareTag("Deadly"))
         {
+            controller.enabled = false;
             gameObject.transform.position = respawnPosition;
+            controller.enabled = true;  
             Debug.Log("deadly");
         }
     }
