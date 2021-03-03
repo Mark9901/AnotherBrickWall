@@ -6,6 +6,8 @@ public class CollisionScript : MonoBehaviour
 {
     Vector3 respawnPosition = Vector3.zero;
     public Transform player;
+    public GameObject boulder;
+    private bool hasrolled = false;
 
     
     void Start()
@@ -22,13 +24,8 @@ public class CollisionScript : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        
-        if (hit.gameObject.tag == "Checkpoint")
-        {
-            respawnPosition = player.position;
-            Debug.Log("checkpoint");
-        }
-        else if (hit.gameObject.CompareTag("Deadly"))
+
+        if (hit.gameObject.CompareTag("Deadly"))
         {
             player.position = respawnPosition;
             Debug.Log("deadly");
@@ -42,5 +39,11 @@ public class CollisionScript : MonoBehaviour
             respawnPosition = player.position;
             Debug.Log("checkpoint");
         }
+        if (other.gameObject.tag == "ActivateBoulder" && hasrolled == false)
+        {
+            boulder.GetComponent<BoulderRoll>().Roll();
+            hasrolled = true;
+        }
+
     }
 }
