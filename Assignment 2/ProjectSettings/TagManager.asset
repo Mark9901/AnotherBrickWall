@@ -8,7 +8,6 @@ TagManager:
   - Checkpoint
   - Deadly
   - ActivateBoulder
-  - Cheese
   layers:
   - Default
   - TransparentFX

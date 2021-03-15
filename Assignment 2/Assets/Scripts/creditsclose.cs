@@ -9,7 +9,7 @@ public class creditsclose : MonoBehaviour
     public GameObject creditimage;
     public GameObject creditdisable;
     public GameObject exitdisable;
-
+    public GameObject title;
 
     public void Credits()
     {
@@ -17,7 +17,7 @@ public class creditsclose : MonoBehaviour
         creditimage.SetActive(true);
         exitdisable.SetActive(false);
         creditdisable.SetActive(false);
-
+        title.SetActive(false);
         
 
     }
@@ -27,7 +27,7 @@ public class creditsclose : MonoBehaviour
         creditimage.SetActive(false);
         exitdisable.SetActive(true);
         creditdisable.SetActive(true);
-
+        title.SetActive(true);
        
     }
 }
