@@ -927,6 +927,7 @@ MonoBehaviour:
   currentState: 
   smooth: 1
   resetTime: 1
+  audioSource: {fileID: 0}
 --- !u!4 &61537085
 Transform:
   m_ObjectHideFlags: 0
@@ -3183,6 +3184,7 @@ MonoBehaviour:
   currentState: 
   smooth: 1
   resetTime: 1
+  audioSource: {fileID: 0}
 --- !u!4 &291269676
 Transform:
   m_ObjectHideFlags: 0
@@ -4740,6 +4742,7 @@ MonoBehaviour:
   currentState: 
   smooth: 1
   resetTime: 2
+  audioSource: {fileID: 0}
 --- !u!4 &454961414
 Transform:
   m_ObjectHideFlags: 0
@@ -10816,6 +10819,7 @@ MonoBehaviour:
   currentState: 
   smooth: 1
   resetTime: 1
+  audioSource: {fileID: 0}
 --- !u!4 &1048423047
 Transform:
   m_ObjectHideFlags: 0
@@ -11971,6 +11975,7 @@ MonoBehaviour:
   currentState: 
   smooth: 1
   resetTime: 2
+  audioSource: {fileID: 0}
 --- !u!4 &1178096891
 Transform:
   m_ObjectHideFlags: 0
@@ -12125,6 +12130,7 @@ MonoBehaviour:
   currentState: 
   smooth: 1
   resetTime: 0.5
+  audioSource: {fileID: 0}
 --- !u!4 &1190643813
 Transform:
   m_ObjectHideFlags: 0
@@ -12371,6 +12377,7 @@ MonoBehaviour:
   currentState: 
   smooth: 1
   resetTime: 1
+  audioSource: {fileID: 0}
 --- !u!4 &1200564263
 Transform:
   m_ObjectHideFlags: 0
@@ -16477,6 +16484,7 @@ MonoBehaviour:
   currentState: 
   smooth: 1
   resetTime: 2
+  audioSource: {fileID: 0}
 --- !u!4 &1316571266
 Transform:
   m_ObjectHideFlags: 0
@@ -24526,6 +24534,7 @@ MonoBehaviour:
   currentState: 
   smooth: 1
   resetTime: 1
+  audioSource: {fileID: 0}
 --- !u!4 &1962216911 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 415016, guid: afd19ab1d4bb70b499bb2f62171a522d,
@@ -26504,6 +26513,7 @@ MonoBehaviour:
   currentState: 
   smooth: 1
   resetTime: 2
+  audioSource: {fileID: 0}
 --- !u!4 &2116710632
 Transform:
   m_ObjectHideFlags: 0
