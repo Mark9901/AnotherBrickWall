@@ -8,11 +8,6 @@ TagManager:
   - Checkpoint
   - Deadly
   - ActivateBoulder
-<<<<<<< HEAD
-=======
-  - Cheese
-  - EndCheese
->>>>>>> Christian
   layers:
   - Default
   - TransparentFX
