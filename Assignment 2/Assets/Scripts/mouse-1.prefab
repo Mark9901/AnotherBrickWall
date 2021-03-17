@@ -11564,7 +11564,7 @@ GameObject:
   - component: {fileID: 4982485917390282651}
   m_Layer: 0
   m_Name: mouse-1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11630,7 +11630,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boulder: {fileID: 0}
-  cheeseCollected: 0
 --- !u!143 &4982485917390282651
 CharacterController:
   m_ObjectHideFlags: 0
