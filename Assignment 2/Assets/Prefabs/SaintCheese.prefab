@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3194126889726133290}
   - component: {fileID: 2016498754293156751}
   - component: {fileID: 4330489935581265733}
+  - component: {fileID: 9047303504316839744}
   m_Layer: 0
   m_Name: SaintCheese
   m_TagString: EndCheese
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &9047303504316839744
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2817003590908255888}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.028150894, y: 0.013750762, z: 0.016348029}
+  m_Center: {x: -0.00050450995, y: -0.00096316147, z: 0.007874015}

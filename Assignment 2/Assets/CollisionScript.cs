@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class CollisionScript : MonoBehaviour
 {
@@ -10,17 +12,19 @@ public class CollisionScript : MonoBehaviour
     public GameObject boulder;
     private bool hasrolled = false;
 
-    
+    public int cheeseCollected = 0;
+
+
     void Start()
     {
         respawnPosition = gameObject.transform.position;
         controller = gameObject.GetComponent<CharacterController>();
     }
 
-   
+
     void Update()
     {
-        
+
     }
 
 
@@ -31,7 +35,7 @@ public class CollisionScript : MonoBehaviour
         {
             controller.enabled = false;
             gameObject.transform.position = respawnPosition;
-            controller.enabled = true;  
+            controller.enabled = true;
             Debug.Log("deadly");
         }
     }
@@ -50,6 +54,17 @@ public class CollisionScript : MonoBehaviour
             boulder.GetComponent<BoulderRoll>().Roll();
             hasrolled = true;
         }
-      
+        if (other.gameObject.tag == "Cheese")
+        {
+            other.gameObject.SetActive(false);
+            cheeseCollected++;
+            Debug.Log("cheese");
+        }
+
+        if (other.gameObject.tag == "EndCheese")
+        {
+            SceneManager.LoadScene("Main Menu Scene");
+        }
+
     }
 }
