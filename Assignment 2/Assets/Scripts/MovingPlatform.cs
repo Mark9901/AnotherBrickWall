@@ -11,11 +11,13 @@ public class MovingPlatform : MonoBehaviour
      public string currentState;
      public float smooth;
      public float resetTime;
+     public AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         ChangeTarget();
+        audioSource.Play();
     }
 
     // Update is called once per frame
