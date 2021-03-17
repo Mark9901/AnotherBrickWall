@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class CollisionScript : MonoBehaviour
 {
@@ -57,6 +59,11 @@ public class CollisionScript : MonoBehaviour
             other.gameObject.SetActive(false);
             cheeseCollected++;
             Debug.Log("cheese");
+        }
+
+        if(other.gameObject.tag == "EndCheese")
+        {
+            SceneManager.LoadScene("Main Menu Scene");
         }
 
     }
