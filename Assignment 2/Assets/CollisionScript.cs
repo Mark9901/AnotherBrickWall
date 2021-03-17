@@ -10,8 +10,6 @@ public class CollisionScript : MonoBehaviour
     public GameObject boulder;
     private bool hasrolled = false;
 
-    public int cheeseCollected = 0;
-
     
     void Start()
     {
@@ -52,12 +50,6 @@ public class CollisionScript : MonoBehaviour
             boulder.GetComponent<BoulderRoll>().Roll();
             hasrolled = true;
         }
-        if (other.gameObject.tag == "Cheese")
-        {
-            other.gameObject.SetActive(false);
-            cheeseCollected++;
-            Debug.Log("cheese");
-        }
-
+      
     }
 }

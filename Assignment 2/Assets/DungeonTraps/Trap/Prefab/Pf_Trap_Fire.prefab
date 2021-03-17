@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 11152550}
   m_Layer: 0
   m_Name: Pf_Trap_Fire
-  m_TagString: Untagged
+  m_TagString: Deadly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
