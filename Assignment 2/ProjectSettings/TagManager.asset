@@ -8,6 +8,9 @@ TagManager:
   - Checkpoint
   - Deadly
   - ActivateBoulder
+  - EndCheese
+  - Fire
+  - ActivateBouldler2
   layers:
   - Default
   - TransparentFX

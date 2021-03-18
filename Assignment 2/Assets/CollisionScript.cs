@@ -11,6 +11,8 @@ public class CollisionScript : MonoBehaviour
     private CharacterController controller;
     public GameObject boulder;
     private bool hasrolled = false;
+    public GameObject boulder2;
+    private bool hasrolling = false;
 
     public int cheeseCollected = 0;
 
@@ -65,6 +67,13 @@ public class CollisionScript : MonoBehaviour
         {
             SceneManager.LoadScene("Main Menu Scene");
         }
+        if (other.gameObject.tag == "ActivateBouldler2" && hasrolling == false)
+        {
+            boulder2.GetComponent<BoulderRoll>().Roll2();
+            hasrolling = true;
+        }
+
+
 
     }
 }

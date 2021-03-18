@@ -11,6 +11,8 @@ public class BoulderRoll : MonoBehaviour
     private float timer = 0.0f;
     public float timeRolling;
     public float amountOfForce;
+    private bool roll2 = false;
+    private float timers = 0.0f;
 
     void Start()
     {
@@ -30,7 +32,18 @@ public class BoulderRoll : MonoBehaviour
         {
             rb.AddForce(Vector3.right* amountOfForce);
         }
-        
+
+        if (roll2 == true)
+        {
+            timers += Time.deltaTime;
+        }
+
+
+        if (timers <= timeRolling && roll2 == true)
+        {
+            rb.AddForce(Vector3.left * amountOfForce);
+        }
+
 
     }
 
@@ -38,5 +51,9 @@ public class BoulderRoll : MonoBehaviour
     public void Roll()
     {
         roll = true;
+    }
+    public void Roll2()
+    {
+        roll2 = true;
     }
 }
