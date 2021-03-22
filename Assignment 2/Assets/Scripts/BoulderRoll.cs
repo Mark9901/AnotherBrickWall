@@ -30,7 +30,7 @@ public class BoulderRoll : MonoBehaviour
 
         if(timer <= timeRolling && roll == true)
         {
-            rb.AddForce(Vector3.right* amountOfForce);
+            rb.AddForce(Vector3.left* amountOfForce);
         }
 
         if (roll2 == true)
