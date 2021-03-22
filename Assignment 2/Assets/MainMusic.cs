@@ -19,9 +19,11 @@ public class MainMusic : MonoBehaviour
 
         if (loopTimer >= 201)
         {
-            SoundManager.PlaySound("MainMusic");
+            SoundManager.PlaySound("Cave");
             loopTimer = 0.0f;
         }
        
     }
+
+ 
 }
